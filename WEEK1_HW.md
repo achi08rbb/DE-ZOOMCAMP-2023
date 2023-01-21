@@ -1,28 +1,45 @@
-QUESTION 3. COUNT RECORDS
+QUESTION 1
+``` docker build -help ```
+QUESTION 2
 
+```
+winpty docker run -it --entrypoint=bash python:3.9 
+```
+
+``` pip list ``
+
+QUESTION 3. COUNT RECORDS
+```
 SELECT COUNT(*)
 FROM green_taxi_data
 WHERE  to_char(lpep_pickup_datetime, 'YYYY-MM-DD')='2019-01-15' 
         AND to_char(lpep_dropoff_datetime, 'YYYY-MM-DD')='2019-01-15';
+```
 
 QUESTION 4. Day with the largest trip distance
 
+``` 
 SELECT lpep_pickup_datetime
 FROM green_taxi_data
 WHERE trip_distance = (SELECt MAX(trip_distance) 
-                        FROM green_taxi_data);
+                        FROM green_taxi_data); 
+```
 
 
 QUESTION 5. The number of passengers
 
+``` 
 SELECT COUNT(passenger_count), passenger_count
 FROM green_taxi_data
 WHERE passenger_count IN (2,3) 
 AND (to_char(lpep_pickup_datetime, 'YYYY-MM-DD')='2019-01-01' 
-    AND to_char(lpep_dropoff_datetime, 'YYYY-MM-DD')='2019-01-01');
+    AND to_char(lpep_dropoff_datetime, 'YYYY-MM-DD')='2019-01-01'); 
+```
 
 QUESTION 6. Largest tip
 
+
+``` 
 SELECT "t"."Zone"
 FROM taxi_zone_data t
 WHERE "t"."LocationID" = (SELECT "g"."DOLocationID"
@@ -33,3 +50,4 @@ WHERE "t"."LocationID" = (SELECT "g"."DOLocationID"
 						  GROUP BY "g"."DOLocationID"
 						  ORDER BY MAX(tip_amount) DESC
 						  LIMIT 1);
+```
