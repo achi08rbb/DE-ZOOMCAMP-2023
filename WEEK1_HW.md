@@ -1,13 +1,16 @@
 QUESTION 1
 ```python
-docker build -help 
+docker build --help 
 ```
 
 QUESTION 2
+Running an image:
 
 ```python
 winpty docker run -it --entrypoint=bash python:3.9 
 ```
+
+Listing python packages/modules installed:
 
 ```python
 pip list 
@@ -34,11 +37,11 @@ WHERE trip_distance = (SELECt MAX(trip_distance)
 QUESTION 5. The number of passengers
 
 ```python
-SELECT COUNT(passenger_count), passenger_count
+SELECT passenger_count, COUNT(passenger_count)
 FROM green_taxi_data
 WHERE passenger_count IN (2,3) 
-AND (to_char(lpep_pickup_datetime, 'YYYY-MM-DD')='2019-01-01' 
-    AND to_char(lpep_dropoff_datetime, 'YYYY-MM-DD')='2019-01-01'); 
+		AND (to_char(lpep_pickup_datetime, 'YYYY-MM-DD'))='2019-01-01'
+GROUP BY passenger_count;
 
 ```
 
