@@ -1,0 +1,75 @@
+###
+### A complete description of a Prefect Deployment for flow 'etl-web-to-gcs-parent'
+###
+name: git-docker-flow
+description: Parent of the main ETL function for Parameterization
+version: 81c054ace89c641eb9cb382b4c08c983
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters: {}
+schedule: null
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-web-to-gcs-parent
+manifest_path: null
+infrastructure:
+  type: docker-container
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  image: rchllblmr/prefect:zoom
+  image_pull_policy: ALWAYS
+  image_registry: null
+  networks: []
+  network_mode: null
+  auto_remove: true
+  volumes: []
+  stream_output: true
+  _block_document_id: f0fdc763-ce2f-42e6-80df-cad459c8b5a6
+  _block_document_name: zoom
+  _is_anonymous: false
+  block_type_slug: docker-container
+  _block_type_slug: docker-container
+storage:
+  repository: https://github.com/achi08rbb/DE-ZOOMCAMP-2023.git
+  reference: null
+  access_token: '**********'
+  _block_document_id: fac241cb-3efe-4150-bc25-370783461fb9
+  _block_document_name: gitzoomcamp
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: etl_web_to_gcs.py:etl_web_to_gcs_parent
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    colors:
+      title: colors
+      position: 0
+      type: array
+      items:
+        type: string
+    years:
+      title: years
+      position: 1
+      type: array
+      items:
+        type: integer
+    months:
+      title: months
+      position: 2
+      type: array
+      items:
+        type: integer
+  required:
+  - colors
+  - years
+  - months
+  definitions: null
