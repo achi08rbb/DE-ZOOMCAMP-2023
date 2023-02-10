@@ -1,19 +1,13 @@
 ###
 ### A complete description of a Prefect Deployment for flow 'etl-web-to-gcs-parent'
 ###
-name: git-docker-flow
+name: git-flow
 description: Parent of the main ETL function for Parameterization
 version: 364bc65c885062f8b3f4ba487d106eb7
 # The work queue that will handle this deployment's runs
 work_queue_name: default
 tags: []
-parameters:
-  colors:
-  - yellow
-  months:
-  - 11
-  years:
-  - 2020
+parameters: {'colors':['green'], months:[11], years:[2020]}
 schedule: null
 infra_overrides: {}
 
@@ -30,21 +24,21 @@ infrastructure:
   command: null
   stream_output: true
   working_dir: null
-  _block_document_id: 27b1aaf0-a137-42c2-9346-30e09dd6abd9
-  _block_document_name: anonymous-febb8f30-f3db-4265-b793-01111c2a7b84
+  _block_document_id: 0859d6ae-2d45-403f-bfd4-ff81b2578fba
+  _block_document_name: anonymous-346d2596-da61-4016-b95a-5d7184653a83
   _is_anonymous: true
   block_type_slug: process
   _block_type_slug: process
 storage:
-  repository: https://github.com/achi08rbb/DE-ZOOMCAMP-2023.git
-  reference: main
-  access_token: '**********'
+  repository: https://github.com/achi08rbb/DE-ZOOMCAMP-2023/
+  reference: null
+  access_token: null
   _block_document_id: fac241cb-3efe-4150-bc25-370783461fb9
   _block_document_name: gitzoomcamp
   _is_anonymous: false
   block_type_slug: github
   _block_type_slug: github
-path: .
+path: ./
 entrypoint: etl_web_to_gcs.py:etl_web_to_gcs_parent
 parameter_openapi_schema:
   title: Parameters
