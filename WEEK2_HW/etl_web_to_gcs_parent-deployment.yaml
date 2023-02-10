@@ -31,7 +31,7 @@ infrastructure:
   _block_type_slug: process
 storage:
   repository: https://github.com/achi08rbb/DE-ZOOMCAMP-2023.git
-  reference: tree/main/WEEK2_HW
+  reference: main
   access_token: '**********'
   _block_document_id: fac241cb-3efe-4150-bc25-370783461fb9
   _block_document_name: gitzoomcamp
