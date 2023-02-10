@@ -7,7 +7,7 @@ version: 81c054ace89c641eb9cb382b4c08c983
 # The work queue that will handle this deployment's runs
 work_queue_name: default
 tags: []
-parameters: {}
+parameters: {'colors':['yellow'], months:[11], years:[2020]}
 schedule: null
 infra_overrides: {}
 
@@ -17,34 +17,28 @@ infra_overrides: {}
 flow_name: etl-web-to-gcs-parent
 manifest_path: null
 infrastructure:
-  type: docker-container
+  type: process
   env: {}
   labels: {}
   name: null
   command: null
-  image: rchllblmr/prefect:zoom
-  image_pull_policy: ALWAYS
-  image_registry: null
-  networks: []
-  network_mode: null
-  auto_remove: true
-  volumes: []
   stream_output: true
-  _block_document_id: f0fdc763-ce2f-42e6-80df-cad459c8b5a6
-  _block_document_name: zoom
-  _is_anonymous: false
-  block_type_slug: docker-container
-  _block_type_slug: docker-container
+  working_dir: null
+  _block_document_id: 27b1aaf0-a137-42c2-9346-30e09dd6abd9
+  _block_document_name: anonymous-febb8f30-f3db-4265-b793-01111c2a7b84
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
 storage:
   repository: https://github.com/achi08rbb/DE-ZOOMCAMP-2023.git
-  reference: null
+  reference: tree/main/WEEK2_HW
   access_token: '**********'
   _block_document_id: fac241cb-3efe-4150-bc25-370783461fb9
   _block_document_name: gitzoomcamp
   _is_anonymous: false
   block_type_slug: github
   _block_type_slug: github
-path: ''
+path: '.'
 entrypoint: etl_web_to_gcs.py:etl_web_to_gcs_parent
 parameter_openapi_schema:
   title: Parameters
