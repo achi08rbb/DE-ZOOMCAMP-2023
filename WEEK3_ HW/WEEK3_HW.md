@@ -12,7 +12,7 @@ Data can be found here: https://github.com/DataTalksClub/nyc-tlc-data/releases/t
 ## Question 1:
 What is the count for fhv vehicle records for year 2019?
 - 65,623,481
-- **43,244,696**
+- **_43,244,696_**
 - 22,978,333
 - 13,942,414
 
@@ -32,7 +32,7 @@ What is the estimated amount of data that will be read when this query is execut
 
 ## Question 3:
 How many records have both a blank (null) PUlocationID and DOlocationID in the entire dataset?
-- **717,748**
+- **_717,748_**
 - 1,215,687
 - 5
 - 20,332
@@ -42,7 +42,7 @@ How many records have both a blank (null) PUlocationID and DOlocationID in the e
 ## Question 4:
 What is the best strategy to optimize the table if query always filter by pickup_datetime and order by affiliated_base_number?
 - Cluster on pickup_datetime Cluster on affiliated_base_number
-- **Partition by pickup_datetime Cluster on affiliated_base_number**
+- **_Partition by pickup_datetime Cluster on affiliated_base_number_**
 - Partition by pickup_datetime Partition by affiliated_base_number
 - Partition by affiliated_base_number Cluster on pickup_datetime
 
@@ -58,7 +58,7 @@ Use the BQ table you created earlier in your from clause and note the estimated 
 What are these values? Choose the answer which most closely matches.
 
 - 12.82 MB for non-partitioned table and 647.87 MB for the partitioned table
-- **647.87 MB for non-partitioned table and 23.06 MB for the partitioned table**
+- **_647.87 MB for non-partitioned table and 23.06 MB for the partitioned table_**
 - 582.63 MB for non-partitioned table and 0 MB for the partitioned table
 - 646.25 MB for non-partitioned table and 646.25 MB for the partitioned table
 
@@ -69,7 +69,7 @@ What are these values? Choose the answer which most closely matches.
 Where is the data stored in the External Table you created?
 
 - Big Query
-- **GCP Bucket**
+- **_GCP Bucket_**
 - Container Registry
 - Big Table
 
